@@ -1,6 +1,7 @@
 package com.prectise.advanced.concurrency;
 
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -15,7 +16,8 @@ public class InvokeAny {
         try {
             System.out.println( "Begin" );
             service = Executors.newSingleThreadExecutor();
-            Callable<String> task = () -> "result";
+            Random random = new Random();
+            Callable<String> task = () -> "result"+random.nextInt();
             String res = service.invokeAny(List.of(task, task, task, task));
 
             System.out.println( res );

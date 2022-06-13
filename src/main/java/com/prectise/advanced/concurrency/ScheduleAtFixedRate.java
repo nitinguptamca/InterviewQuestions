@@ -1,5 +1,6 @@
 package com.prectise.advanced.concurrency;
 
+import java.util.concurrent.Callable;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -16,6 +17,7 @@ public class ScheduleAtFixedRate {
 
             service = Executors.newSingleThreadScheduledExecutor();
             Runnable task1 = () -> System.out.println( " Runnable Task ");
+          //  Callable<String> task2 = () -> "callable 12";
             
             service.scheduleAtFixedRate(task1, 5, 1, TimeUnit.SECONDS);
 

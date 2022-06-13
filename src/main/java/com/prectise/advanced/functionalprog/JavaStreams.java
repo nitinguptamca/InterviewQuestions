@@ -21,17 +21,18 @@ public class JavaStreams {
         
         // 1.
         // Streams are lazily evaluated
-        var cats = new ArrayList<String>();
+        List<String> cats = new ArrayList<String>();
         cats.add("Annie");
         cats.add("Ripely");
         var str = cats.stream();
         cats.add("KC");
+        cats.add("KC1");
         System.out.println(str.count()); // 3
 
         // 2.
         Stream<Integer> intStr = Stream.of(100,1,231,3333,221,423);
         intStr
-            .findAny()
+            .findFirst()
             .map(n -> "" + n)
             .filter(n -> n.length() == 3 )
             .ifPresent(System.out::println); // 100
@@ -67,7 +68,7 @@ public class JavaStreams {
         // 7.
         // STream to Map 2
         // Avoiding key collisions
-        Stream<String> mapStrm2 = Stream.of("lion", "tiger", "zebra", "timberfox");
+        Stream<String> mapStrm2 = Stream.of("lion", "tiger", "zebra","nitin", "timberfox");
         Map<Integer, String> map2 = mapStrm2
                                         .collect(
                                             Collectors.toMap(

@@ -13,6 +13,12 @@ public class JavaMap {
         // put adds a key-value pair to the map.
         // if key already exists then replace the value and 
         // returns the replaced value
+       // Map<String, String> mapHash = new HashMap<>();
+        Map<String, String> hashMap = new HashMap<>();
+        hashMap.put("null1" ,null);
+        hashMap.put("null" ,null);
+        hashMap.put("null" ,"nitin");
+
         Map<String, String> map = new TreeMap<>();
         System.out.println( map.put("koala", "bamboo") ); // null
         System.out.println( map.put("lion", "meat") ); // null
@@ -25,7 +31,7 @@ public class JavaMap {
         // - containsKey
         // - containsValue
         // Uncomment below
-        // System.out.println(map.contains("lion"));
+        //System.out.println(map.contains("lion"));
         System.out.println( map.containsKey("lion") );
         System.out.println( map.containsValue("sheep") );
 
@@ -75,6 +81,10 @@ public class JavaMap {
         System.out.println( map.putIfAbsent("cow", "grass") ); // null
         System.out.println( map.putIfAbsent("cow", "meth") ); // grass
         System.out.println(map.get("cow")); // grass
+     //   map.put("cow", null);
+    //    map.put("cow1", null);
+    //    map.put("cow2", null);
+
 
         // 8.
         // merge

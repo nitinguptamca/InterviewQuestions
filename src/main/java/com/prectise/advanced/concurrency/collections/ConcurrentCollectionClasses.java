@@ -52,10 +52,11 @@ public class ConcurrentCollectionClasses {
         // Whenever they get modified, the data gets copied over to a new 
         // List/ArrayList.
         // They are suitable for the places where we need to iterate the collections
-        List<Integer> lstOfInts = new CopyOnWriteArrayList<>(List.of( 8, 12, 46));
+        List<Integer> lstOfInts = new CopyOnWriteArrayList<>(List.of( 88,8, 12, 46));
         for ( var i : lstOfInts ) {
             System.out.println(i);
             lstOfInts.add(80);
+          //  lstOfInts.remove(i+1);
         } // 8 12 46
         System.out.println(lstOfInts.size()); // 6
         System.out.println(lstOfInts); // [8, 12, 46, 80, 80, 80]

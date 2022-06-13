@@ -17,11 +17,12 @@ public class PollingUsingFuture {
         try {
             service = Executors.newSingleThreadExecutor();
 
-            Future<?> result  = service.submit(() -> { for( long i = 0; i< 500000; i++ ) PollingUsingFuture.counter++; } );
+            Future<?> result  = service.submit(() -> { for( long i = 0; i< 500000; i++ )  PollingUsingFuture.counter++; } );
 
-            result.get( 10, TimeUnit.SECONDS );
+            Object sss = result.get(10, TimeUnit.SECONDS);
 
-            System.out.println("Reached!");
+            System.out.println("Reached!" );
+
         } catch( TimeoutException te ) {
             System.out.println("Not reached in Time");
         } finally {

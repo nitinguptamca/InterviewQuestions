@@ -17,7 +17,7 @@ import java.util.PrimitiveIterator.OfDouble;
 //      }
 // - If a class implements the Comparable then
 //   it can be used inside Collections.sort
-// - natural odering that uses compareTo is said
+// - natural ordering that uses compareTo is said
 //   to be consistent with equals if, and only if
 //   x.equals(y) is true whenever x.compareTo(y) is 0.
 //   Similarlly x.equals(y) is false whenever x.compareTo(y)
@@ -134,9 +134,12 @@ public class JavaSorting {
         Data d1 = new Data(2);
         Data d2 = new Data(3);
         Data d3 = new Data(1);
-        TreeSet<Data> set = new TreeSet<>(d3);
+        TreeSet<Data> set = new TreeSet<>();
+        TreeSet<Data> set1 = new TreeSet<>(d2);
         set.addAll(List.of(d1, d2, d3));
+        set1.addAll(List.of(d1, d2, d3));
         System.out.println(set);
+        System.out.println(set1);
         System.out.println(set.higher(d1).number);
     }
 

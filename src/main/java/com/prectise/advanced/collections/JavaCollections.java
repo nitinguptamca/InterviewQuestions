@@ -29,12 +29,12 @@ public class JavaCollections {
         System.out.println(intlist instanceof List); // true
         System.out.println(intlist instanceof List<?>); // true
         // Compiler errors below
-        // System.out.println(intlist instanceof List<>);           // Incorrect number of arguments for type List<E>; it cannot be parameterized with arguments <>
-        // System.out.println(intlist instanceof List<Integer>);    // Cannot perform instanceof check against parameterized type List<Integer>. 
+      //   System.out.println(intlist instanceof List<>);           // Incorrect number of arguments for type List<E>; it cannot be parameterized with arguments <>
+       //  System.out.println(intlist instanceof List<Integer>);    // Cannot perform instanceof check against parameterized type List<Integer>.
                                                                     // Use the form List<?> instead since further generic type information will be erased at runtime
-        // System.out.println(intlist instanceof List<Number>);     // Cannot perform instanceof check against parameterized type List<Number>. 
+       //  System.out.println(intlist instanceof List<Number>);     // Cannot perform instanceof check against parameterized type List<Number>.
                                                                     // Use the form List<?> instead since further generic type information will be erased at runtime
-        // System.out.println(intlist instanceof List<Object>);     // Cannot perform instanceof check against parameterized type List<Object>. 
+       // System.out.println(intlist instanceof List<Object>);     // Cannot perform instanceof check against parameterized type List<Object>.
                                                                     // Use the form List<?> instead since further generic type information will be erased at runtime
     
         // 3.

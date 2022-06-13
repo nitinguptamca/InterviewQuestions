@@ -1,5 +1,8 @@
 package com.prectise.advanced.enums;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -15,6 +18,10 @@ public class JavaEnums {
             Person p3 = new Person("Chris", Gender.MALE);
             Person p4 = new Person("Diana", Gender.FEMALE);
             Stream<Person> persons = Stream.of(p1, p2, p3, p4);
+            //System.out.println(persons.collect(Collectors.toMap(p -> p.name, p -> p.gender)));
+            List<String> list = new ArrayList<>();
+            list.add("ee");
+            Collections.unmodifiableList(list);
             System.out.println(persons.collect(Collectors.toMap(p -> p.gender, p -> p.name)));
         } catch ( Exception e ) {
             e.printStackTrace();

@@ -8,6 +8,7 @@ public enum JavaEnumWithMain {
 
     // can also have a main method
     public static void main(String[] args) {
+        System.out.println(JavaEnumWithMain.JAVA);
         System.out.println("Complicated Enum");
     }
 }

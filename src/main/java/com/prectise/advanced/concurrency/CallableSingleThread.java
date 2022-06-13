@@ -12,6 +12,7 @@ public class CallableSingleThread {
 
         try{
             service = Executors.newSingleThreadExecutor();
+          //  service = Executors.newFixedThreadPool(5);
 
             Future<Integer> res = service.submit(() -> 30+11);
 

@@ -47,7 +47,8 @@ class Dinner {
 class Plants {
     String type;
     public Plants ( String type ) {
-        this.type = (@CarbonBased String) type;
+        this.type = ///(@CarbonBased String)
+                type;
     }
 }
 

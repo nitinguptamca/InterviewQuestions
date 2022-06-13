@@ -10,6 +10,7 @@ package com.prectise.advanced.enums;
 public enum JavaAbstractEnums {
     
     WINTER {
+        @Override
         public String getHours() {
             return "8:00 AM - 6:00 AM";
         }
@@ -18,7 +19,7 @@ public enum JavaAbstractEnums {
             return "Low";
         }
     },
-    SUMER {
+    SUMMER {
         public String getHours() {
             return "6:00 AM - 8:00 AM";
         }
@@ -28,9 +29,9 @@ public enum JavaAbstractEnums {
         }
 
         // COMPILE TIME ERROR - Cannot override final method
-        // public String feeling() {
-        //     return "HOT";
-        // }
+       // public String feeling() {
+      //       return "HOT";
+      //   }
 
         // perfeclty fine, we have overloaded it now for SUMER
         public String feeling( String mood ) {

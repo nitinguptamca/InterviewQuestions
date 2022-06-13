@@ -31,7 +31,8 @@ public class ReentrantLockExample {
             Callable<Integer> task1 = () -> ReentrantLockExample.incrCounter();
             Callable<Integer> task2 = () -> ReentrantLockExample.incrCounter();
 
-            executor.invokeAll( List.of(task1, task2, task1, task2, task1, task2, task1, task2, task1, task2), 10, TimeUnit.SECONDS );
+          //  executor.invokeAll( List.of(task1, task2, task1, task2, task1, task2, task1, task2, task1, task2), 10, TimeUnit.SECONDS );
+            executor.invokeAll( List.of(task1, task2, task1, task2, task1, task2, task1, task2, task1, task2) );
 
             System.out.println(ReentrantLockExample.counter);
 

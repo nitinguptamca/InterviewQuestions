@@ -22,7 +22,7 @@ public @interface JavaAnnotationFields {
     // String[][] generalInfo();
     //valid field
     //private not allow
-    String[] generalInfo();
+     String[] generalInfo();
 
     // VALID FIELD
     // an enum is valid

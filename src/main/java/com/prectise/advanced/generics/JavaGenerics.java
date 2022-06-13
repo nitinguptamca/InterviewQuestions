@@ -22,7 +22,7 @@ public class JavaGenerics {
         // cast them properly
         List names = new ArrayList();
         names.add(new StringBuilder("movie")); // perfectly fine
-        printNames(names);        
+        printNames(names);
 
         // Instead if we use generics this will just gove us a compile time error
         List<String> namesLst = new ArrayList<>();
@@ -138,5 +138,5 @@ class Crate<T> {
     public static <T> T micky( T t ) { return t; }
     public <T> void ticky( ) { }
     // public <T> T sicky( ) { return new T(); } // Cannot instantiate the type T
-    // public <T> kicky( T t ) { return t; } // Return type for the method is missing
+     ///public <T> kicky( T t ) { return t; } // Return type for the method is missing
 }

@@ -5,7 +5,10 @@ package com.prectise.advanced.enums;
 // private, public, protected, default variables are allowed
 // private, protected package-private and public methods are allowed as well 
 enum ComplicatedSeason {
-    WINTER("low", 10), SPRING("high", 20), SUMMER("high", 90), FALL("medium", 30);
+    WINTER("low", 10),
+    SPRING("high", 20),
+    SUMMER("high", 90),
+    FALL("medium", 30);
 
     // not madatory to mark this final
     private final String expectedRain;
@@ -15,9 +18,9 @@ enum ComplicatedSeason {
 
     // COMPILE TIME ERROR
     // Only private constructors are allowed
-    // public ComplicatedSeason( String expectedRain ) {
-    //     this.expectedRain = expectedRain;
-    // }
+   /*  public ComplicatedSeason( String expectedRain ) {
+         this.expectedRain = expectedRain;
+     }*/
 
     private ComplicatedSeason( String expectedRain, int humidity ) {
         this.expectedRain = expectedRain;

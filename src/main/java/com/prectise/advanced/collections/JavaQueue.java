@@ -16,6 +16,7 @@ public class JavaQueue {
         // Returns next element or throws an exception if empty 
         // queue
         // System.out.println(queue.element()); // NoSuchElementException
+      //  System.out.println(queue.element()); // 10
         queue.add( 10 );
         System.out.println(queue.element()); // 10
         System.out.println(queue.element()); // 10

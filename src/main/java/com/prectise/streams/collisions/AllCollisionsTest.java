@@ -3,7 +3,8 @@ package com.prectise.streams.collisions;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import static streams.collisions.GridDetection.*;
+import static com.prectise.streams.collisions.GridDetection.*;
+
 
 public class AllCollisionsTest {
 	

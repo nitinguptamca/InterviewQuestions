@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.concurrent.atomic.LongAdder;
 import java.util.function.Consumer;
 
-import static streams.collisions.GridDetection.*;
+import static com.prectise.streams.collisions.GridDetection.*;
+
 
 public class GridTest {
 
