@@ -16,7 +16,7 @@ class A {
 }
 
 // UNCOMMENT BELOW
-// class B extends A {
+ //class B extends A {
 // }
 
 // END OF 1

@@ -1,7 +1,6 @@
 package com.prectise.basics;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -28,6 +27,7 @@ public class JavaExceptions {
 
         // 2.
         // Here ClassCastException occurs when we try to cast objects from
+        //child cloth can't wear parents.
         // different types
         String type = "moose";
         Object obj = type;
@@ -56,9 +56,9 @@ public class JavaExceptions {
         // related types will result in compile time error
         // (The exception FileNotFoundException is already caught by the alternative IOException)
         // UNCOMMENT BELOW CODE
-        // try{
+       //  try{
 
-        // } catch( FileNotFoundException | IOException e) {}
+        /// } catch( FileNotFoundException | IOException e) {}
 
         // 7.
         // with finally block there can be return statements, but finally 
@@ -76,17 +76,17 @@ public class JavaExceptions {
 
         // 9.
         // Catch block is optional with try with resources
-        try( FileInputStream is = new FileInputStream("file") ) {
+     /*   try( FileInputStream is = new FileInputStream("file") ) {
 
-        }
+        }*/
 
         // 10.
         // finally is options with try with resources
-        try( FileInputStream is = new FileInputStream("file")) {
+      //  try( FileInputStream is = new FileInputStream("file")) {
 
-        } finally {
-            System.out.println("Finally is called");
-        }
+      //  } finally {
+     //       System.out.println("Finally is called");
+     //   }
 
         // 11. 
         // Scope of variable declared in try with resources is inside 
@@ -101,17 +101,27 @@ public class JavaExceptions {
             // sc.nextInt();
         }
 
+        try(Scanner sc = new Scanner(System.in)){
+            sc.hasNext();
+        }catch ( Exception e ) {
+            // UNCOMMENT BELOW CODE
+            // sc.nextInt();
+        } finally {
+            // UNCOMMENT BELOW CODE
+            // sc.nextInt();
+        }
+
         // 12.
         // If we place try-catch around methods that won't throw checked
         // exception, a compile time error will be thrown
         // (Unreachable catch block for IOException. This exception is never thrown from the try statement body)
-        // try{
-        //     new JavaExceptions().gotHome();
-        // } catch ( IOException e ) {
+       ///  try{
+      //       new JavaExceptions().gotHome();
+     //   } catch ( IOException e ) {
 
-        // }
+     //    }
 
-
+        System.out.print(new JavaExceptions().gotHome());
     }
 
     public int gotHome() {

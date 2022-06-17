@@ -6,6 +6,14 @@ public class JavaAnonymousInnerClass {
         abstract void doSomething();
     }
 
+    class concreate extends NormalInnerClass{
+
+        @Override
+        void doSomething() {
+
+        }
+    }
+
     public class NormalInnerClassConst {
         int i;
         public NormalInnerClassConst(int i){

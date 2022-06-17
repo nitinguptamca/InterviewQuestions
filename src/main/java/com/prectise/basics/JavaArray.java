@@ -34,9 +34,9 @@ public class JavaArray {
         var arrList1 = new ArrayList<>();
         arrList1.add("20");
         // Invalid ( Type mismatch: cannot convert from element type Object to String )
-        // for( String ele: arrList1 ) {
-        //     System.out.println( ele );
-        // }
+       //  for( String ele: arrList1 ) {
+      //       System.out.println( ele );
+      //   }
         // Valid
         for( Object ele: arrList1 ) {
             System.out.println( ele );

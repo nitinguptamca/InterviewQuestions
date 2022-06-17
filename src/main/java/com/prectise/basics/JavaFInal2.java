@@ -12,6 +12,7 @@ class Holder{
      final var a = new Holder(5);
      var b = new Holder(10);
      a.link = b;
+     //   System.out.println(a.link.value+" "+b.link.value);
      b.link = setIt(a, b);
      System.out.println(a.link.value+" "+b.link.value);
     }
