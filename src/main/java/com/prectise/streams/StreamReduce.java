@@ -9,7 +9,8 @@ public class StreamReduce {
         Data data2 = new Data(2);
 
         // COmpilation error!!!!
-        // The method reduce(Data, BinaryOperator<Data>) in the type Stream<Data> is not applicable for the arguments (int, (<no type> d1, <no type> d2) -> {})
+        // The method reduce(Data, BinaryOperator<Data>) in the type Stream<Data> is not
+        // applicable for the arguments (int, (<no type> d1, <no type> d2) -> {})
         //Object result = Stream.of(data1, data2).reduce(1, (d1, d2) -> d1.number + d2.number);
         
 
@@ -18,7 +19,8 @@ public class StreamReduce {
         // accumulator is the the BinaryOperator 
         // The type of Idenity and BinraryOperator should be same.
         // The accumulator should also return same data type
-        Data result = Stream.of(data1, data2).reduce(new Data(1), (Data a, Data b) -> new Data(a.number + b.number));
+        Data result = Stream.of(data1, data2).reduce(new Data(1),
+                (Data a, Data b) -> new Data(a.number + b.number));
 
         System.out.println(result.number);
     }

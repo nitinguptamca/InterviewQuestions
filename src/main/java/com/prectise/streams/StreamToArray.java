@@ -1,5 +1,6 @@
 package com.prectise.streams;
 
+import java.util.*;
 import java.util.stream.Stream;
 
 public class StreamToArray {
@@ -21,6 +22,7 @@ public class StreamToArray {
                                 .of( Employee.SOME )
                                 .filter( e -> e.getSalary() < 2000 )
                                 .toArray(Employee[]::new);
+        System.out.println(Arrays.toString(empObjs));
 
 
     }

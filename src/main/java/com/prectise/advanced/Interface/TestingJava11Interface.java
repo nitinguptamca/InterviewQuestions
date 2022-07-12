@@ -48,8 +48,9 @@ interface A {
 
 public class TestingJava11Interface implements A ,B{
     public static void main(String[] args) {
-        TestingJava11Interface t = new TestingJava11Interface();
+        A t = new TestingJava11Interface();
         t.test1();
+        t.test2();
 
        // t.sum(10, 20); //CE
       // Test.sum(10, 20); //CE
